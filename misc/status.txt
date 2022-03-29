@@ -1,0 +1,3 @@
+McKenna Wirth
+
+Plan for using Kali: I have installed VMWare on my own computer (running Windows 11).  It has been fully intalled and I am using Carleton's license.
