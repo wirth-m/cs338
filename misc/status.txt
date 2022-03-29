@@ -1,3 +1,3 @@
 McKenna Wirth
 
-Plan for using Kali: I have installed VMWare on my own computer (running Windows 11).  It has been fully intalled and I am using Carleton's license.
+Plan for using Kali: I have installed VMWare on my own computer (running Windows 11).  Kali and Metasploitable (and 7-Zip) have been fully installed and I am using Carleton's license.
