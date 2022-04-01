@@ -1,0 +1,12 @@
+McKenna Wirth
+Worked with Antonia Ritter
+
+1: My IP address is 172.17.134.242 
+2: You can use the ping command followed by the hostname (URL) to find the IP address of a given host.  I used this command to find the IP address of cs.carleton.edu (137.22.5.8). Source: https://www.dotcom-monitor.com/wiki/knowledge-base/target-hostname-or-ip-address/#:~:text=In%20an%20open%20command%20line,web%20resource%20in%20the%20response. 
+3: You can use the nslookup command followed by the IP address to find the host name in some cases (Source: https://smallbusiness.chron.com/ping-computer-behind-router-58692.html), but online lookup tools like https://lookup.icann.org/ are easier to use (Source: https://www.dotcom-monitor.com/wiki/knowledge-base/target-hostname-or-ip-address/#:~:text=In%20an%20open%20command%20line,web%20resource%20in%20the%20response.).  This online service will list private users under the Internet Assigned Numbers Authority contact information, listed as a Private Address.
+4:
+5:
+6:
+7:
+8:
+9:
