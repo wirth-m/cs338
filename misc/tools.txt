@@ -2,11 +2,19 @@ McKenna Wirth
 Worked with Antonia Ritter
 
 1: My IP address is 172.17.134.242 according to the command ifcongig (mentioned in class by Jeff Ondich).
-2: You can use the ping command followed by the hostname (URL) to find the IP address of a given host.  I used this command to find the IP address of cs.carleton.edu (137.22.5.8). Source: https://www.dotcom-monitor.com/wiki/knowledge-base/target-hostname-or-ip-address/#:~:text=In%20an%20open%20command%20line,web%20resource%20in%20the%20response. 
-3: You can use the nslookup command followed by the IP address to find the host name in some cases (Source: https://smallbusiness.chron.com/ping-computer-behind-router-58692.html), but online lookup tools like https://lookup.icann.org/ are easier to use (Source: https://www.dotcom-monitor.com/wiki/knowledge-base/target-hostname-or-ip-address/#:~:text=In%20an%20open%20command%20line,web%20resource%20in%20the%20response.).  This online service will list private users under the Internet Assigned Numbers Authority contact information, listed as a Private Address.
-4:
-5:
-6:
-7: Use the command wget followed by the url (Source: https://linuxize.com/post/wget-command-examples/)
-8: Use the command curl followed by -i and then the URL (Source: https://serverfault.com/questions/249483/shell-command-to-see-the-http-headers)
-9: Use the command curl followed by -v and then the URL (Source: https://serverfault.com/questions/249483/shell-command-to-see-the-http-headers)
+
+2: You can use the ping command followed by the hostname (URL) to find the IP address of a given host.  I used this command to find the IP address of cs.carleton.edu (137.22.5.8) (Source: https://www.dotcom-monitor.com/wiki/knowledge-base/target-hostname-or-ip-address/#:~:text=In%20an%20open%20command%20line,web%20resource%20in%20the%20response). 
+
+3: You can use the nslookup command followed by the IP address to find the host name in some cases (Source: https://smallbusiness.chron.com/ping-computer-behind-router-58692.html).  The nmap command can also be used to find the host name if given an IP address instead of a host name.  Online lookup tools like https://lookup.icann.org/ may be easier to use (Source: https://www.dotcom-monitor.com/wiki/knowledge-base/target-hostname-or-ip-address/#:~:text=In%20an%20open%20command%20line,web%20resource%20in%20the%20response.).  This online service will list private users under the Internet Assigned Numbers Authority contact information, listed as a Private Address.
+
+4: The scp command followed by the file name and desired new location/filepath can be used to copy files across machines (mentioned in class by Jeff Ondich).  The curl command followed by -t has an option to transfer a file to a new location (in the curl command documentation).
+
+5: You can use the nmap command followed by the hosname (URL) -p and then the range of ports you'd like to see.  This works with one port or a range (Source: https://nmap.org/book/man-port-specification.html).
+
+6: The nmap command, followed by the hostname (URL), provides a summary of the ports that are open or filtered (Source: https://nmap.org/book/man-port-scanning-basics.html).
+
+7: Use the command wget followed by the url (Source: https://linuxize.com/post/wget-command-examples/).
+
+8: Use the command curl followed by -i and then the URL (Source: https://serverfault.com/questions/249483/shell-command-to-see-the-http-headers).
+
+9: Use the command curl followed by -v and then the URL (Source: https://serverfault.com/questions/249483/shell-command-to-see-the-http-headers).
