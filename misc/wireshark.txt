@@ -1,0 +1,45 @@
+McKenna Wirth
+Worked with Antonia Ritter
+
+===== DAYTIME =====
+
+1. These are the frame summaries of the TCP handshake, as captured by Wireshark:
+1	0.000000000	192.168.249.128	129.6.15.28	TCP	74	44718 → 13 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM=1 TSval=1404835580 TSecr=0 WS=128
+2	0.034294207	129.6.15.28	192.168.249.128	TCP	60	13 → 44718 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1460
+3	0.034349294	192.168.249.128	129.6.15.28	TCP	54	44718 → 13 [ACK] Seq=1 Ack=1 Win=64240 Len=0
+
+2. The client is using the port 44718.
+
+3. The following frame contains the actual date and time:
+4	0.068486167	129.6.15.28	192.168.249.128	DAYTIME	105	DAYTIME Response
+
+4.  This is the full content of that frame, with labels in brackets:
+59672 [modified Julian date, see source 1] 22-04-03 [year-month-day] 20:36:16 [hour:minute:second] 50 [indicates that we're on daylight savings time, see source 2] 0 [leap second, see source 1] 0 [server health, see source 1] 307.1 [time code accounting for network delays, measured in milliseconds, see source 1] UTC(NIST) [Server that is accessed] * [on time indicator, see source 1]
+Source 1: https://www.esp8266.com/viewtopic.php?p=8785
+Source 2: https://tf.nist.gov/general/pdf/1046.pdf
+Note that, while Source 1 was found first and used to answer most of these questions, Source 2 also provides this information (p. 508-509).
+
+5. [SYN] stands for "synchronize," marking the initiation of communication between the client and the server. 
+
+6. [ACK] means "acknowledge," as the client and server acknowledge the other's previous communication. 
+
+7. [FIN] refers to "finalize," marking the end of the connection.
+
+8. According to Wireshark, the client initiated the closing of the connection.  This is evident because the client sent the [FIN] frame.
+
+===== HTTP =====
+
+1. Based on the protocol field of Wireshark, 106 TCP connections were opened.
+
+2. Your homepage, index.html, was requested in frame 28: 
+28	0.166324113	192.168.249.128	45.79.89.123	HTTP	403	GET /index.html HTTP/1.1
+
+3. Your headshot, jeff_square_head.jpg, was requested in frame 32: 
+32	0.266099840	192.168.249.128	45.79.89.123	HTTP	372	GET /jeff_square_head.jpg HTTP/1.1
+
+===== QUESTIONS =====
+What is a favicon? Requested in frame 115	(0.421441009	192.168.249.128	45.79.89.123	HTTP	363	GET /favicon.ico HTTP/1.1) 
+Is TLSv1.2 an encrpytion protocol?  How often does it change keys?	
+What does PSH mean in the context of a TCP protocol?
+What is the significance of the color coding in WireShark?
+How does the client know what to request?  For example, my client asks for the specific name of the image file (jeff_square_head.jpg) but that is not provided by the user.
