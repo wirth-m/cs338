@@ -1,0 +1,58 @@
+McKenna Wirth and Antonia Ritter
+CS 338 Spring 2022
+Assignment: Brute-Force Password Cracking
+
+Part 1
+Total time: 0m0.344s
+Number of hashes computed: 267,751 
+Passwords cracked: 2,793
+Time per hash computed: 0.00000128s
+Time per password cracked: 0.00012317s
+Passwords cracked per number of hashes computed: 0.01043137
+
+Part 2
+Total time: 18m27.074s
+Number of hashes computed: 1,009,430,126
+Passwords cracked: 39
+Time per hash computed: 0.0000010967s
+Time per password cracked: 28.3864s
+Passwords cracked per number of hashes computed: 0.0000000386
+
+Part 3
+Total time: 13m51.623s
+Number of hashes computed: 750,781,883
+Passwords cracked: 2,805
+Time per hash computed: 0.0000011076759s
+Time per password cracked: 0.296478s
+Passwords cracked per number of hashes computed: 0.0000037361
+
+Analysis:
+
+- Did your time per hash computed change between phases? By what factor? Why?
+
+No, hashing time stayed fairly consistent across phases.  This is because it relies on the same operation, regardless of the input being hashed (in later parts, the time differential comes from conducting far more hashes).
+
+
+- Did your time per password crack change between phases? By what factor? Why?
+
+Yes, it increased by a factor of about 500,000 between phases 1 and 2.  This is due to the increased number of hashes to compute (for each word, you need to try it in combination with every other word).  Between phases 1 and 3, in increased by a factor of 1,000.  While the number of hashes required for phase 3 was substantially more than phase 1, but the list of possible salts is shorter than the list of possible words (there are fewer passwords than words in the provided materials).
+
+
+- Suppose you wanted to precompute all the possible password hashes for each so you could just look up the password in a table indexed by the hash. How much memory would be required for each phase?
+
+For phase 1, we would need one hash for every word in the dictionary in addition to storing the word.  
+
+For phase 2, we would need one hash for every possible pair of words (memory requirements for phase 1 squared) as well as storing the pairs of words.  
+
+For phase 3, assuming we have the salts, we would need to store every possible combination of salt and word for every salt in the password file (more than phase 1 but less than phase 2 if the password file is shorter than the word file).  If we did not have access to the salts in the password file, far more memory would be required.  This is because you would need to compute and store the hash for every possible salt, which is random, may be of varying length, and not bounded by the requirements of any langauge.
+
+
+- Give 3-4 reasons we should store password hashes and not the passwords themselves. Think in terms of threats, who the attackers might be, etc.
+
+If someone gets the password file and knows the hash method, it still takes a while to brute force the plaintext.
+
+Knowing part of the password is not enough to automatically find the entire plaintext password.
+
+Realistically, different people will use the same password. Salting the hashes means that you cannot simply compare password hashes and find the overlap- you have to hash with the salt. This also reduces the utility of a database of unsalted password hashes, meaning you cannot pre-compute the password hashes without the salt.
+
+Password hashes are set lengths, making it easier to write code that utilizes them.
