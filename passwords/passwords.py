@@ -12,11 +12,11 @@ from collections import defaultdict
 # Input: filename for (unsalted) password file
 # Returns: dictionary where key = hash and val = username 
 def import_passwords(filename):
-    passwords_dict = defaultdict(str) 
+    passwords_dict = defaultdict(list) 
     for line in open(filename):
         username = line.split(":")[0]
         password_hash = line.split(":")[1]
-        passwords_dict[password_hash] = username
+        passwords_dict[password_hash].append(username)
     return passwords_dict
 
 
@@ -67,9 +67,10 @@ def passwords1(words):
         hashes_computed += 1 
         # Check against passwords_dict 
         if passwords_dict.get(hash) != None:
-            username = passwords_dict[hash]
-            cracked_passwords[username] = word
-            passwords_cracked += 1 
+            # Accounting for repeat passwords
+            for username in passwords_dict.get(hash):
+                cracked_passwords[username] = word
+                passwords_cracked += 1 
 
     # Output to file 
     with open('cracked1.txt', 'w') as f:
@@ -160,8 +161,8 @@ def passwords3(words):
 
 def main():
     words = [line.strip().lower() for line in open('words.txt')]
-    # passwords1(words)
-    passwords2(words)
+    passwords1(words)
+    # passwords2(words)
     # passwords3(words)
 
 

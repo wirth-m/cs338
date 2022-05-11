@@ -2,23 +2,23 @@ McKenna Wirth and Antonia Ritter
 CS 338 Spring 2022
 Assignment: Brute-Force Password Cracking
 
-Part 1
-Total time: 0m0.344s
+Part 1 (conducted on McKenna's faster computer)
+Total time: 0m0.232s
 Number of hashes computed: 267,751 
-Passwords cracked: 2,793
+Passwords cracked: 2,805
 Time per hash computed: 0.00000128s
-Time per password cracked: 0.00012317s
-Passwords cracked per number of hashes computed: 0.01043137
+Time per password cracked: 0.000081996s
+Passwords cracked per number of hashes computed: 0.010476
 
-Part 2
-Total time: 18m27.074s
-Number of hashes computed: 1,009,430,126
-Passwords cracked: 39
-Time per hash computed: 0.0000010967s
-Time per password cracked: 28.3864s
-Passwords cracked per number of hashes computed: 0.0000000386
+Part 2 (conducted on McKenna's faster computer)
+Total time: 14h 18m 8s
+Number of hashes computed: 29,428,298,520
+Passwords cracked: 1170
+Time per hash computed: 0.000001749s
+Time per password cracked: 44.007s
+Passwords cracked per number of hashes computed: 0.0000000397
 
-Part 3
+Part 3 (conducted on Antonia's computer)
 Total time: 13m51.623s
 Number of hashes computed: 750,781,883
 Passwords cracked: 2,805
@@ -40,11 +40,11 @@ Yes, it increased by a factor of about 500,000 between phases 1 and 2.  This is 
 
 - Suppose you wanted to precompute all the possible password hashes for each so you could just look up the password in a table indexed by the hash. How much memory would be required for each phase?
 
-For phase 1, we would need one hash for every word in the dictionary in addition to storing the word.  
+For phase 1, for every word in the dictionary, we need to store the word (16 bytes), the hash string (32 bytes), and the mapping (also 32 bytes), for a total of 267751 words.  Therefore, each word requires 80 bytes total.  For the full file of words.txt, which as 267751, we would need 267751*80 bytes = 21.42MB.
 
-For phase 2, we would need one hash for every possible pair of words (memory requirements for phase 1 squared) as well as storing the pairs of words.  
+For phase 2, these calculations are the same, but there are 267751*267751 possible combinations to hash and store.  Therefore, we would need 267751*267751*80 bytes = 5.735TB.
 
-For phase 3, assuming we have the salts, we would need to store every possible combination of salt and word for every salt in the password file (more than phase 1 but less than phase 2 if the password file is shorter than the word file).  If we did not have access to the salts in the password file, far more memory would be required.  This is because you would need to compute and store the hash for every possible salt, which is random, may be of varying length, and not bounded by the requirements of any langauge.
+For phase 3, our program assumes we have access to the full list of salts used in the password formation.  Therefore, we need to store every possible combination of salt and word.  Assuming every entry uses a unique salt, we would have 2805 possible salts.  The total memory needed would then be 267751*2805*80 bytes = 60.08GB. 
 
 
 - Give 3-4 reasons we should store password hashes and not the passwords themselves. Think in terms of threats, who the attackers might be, etc.

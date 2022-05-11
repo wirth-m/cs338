@@ -18,6 +18,7 @@ aestill:interpermeate
 agarver:plimsoles
 agboolar:canting
 aguilarj:reprehensive
+aguirree:hookworms
 ahlgrenk2:mayday
 ahmeds3:clepes
 ahmedt:homemade
@@ -400,6 +401,7 @@ changa2:brayer
 changa3:basophile
 change:scriptural
 changstuckiw:convokes
+changt:adversariness
 chanj3:cracker
 chans:merchandize
 chaob:platinocyanic
@@ -469,6 +471,7 @@ claussm:khansamahs
 clawsoni:pilferages
 claybakers:kazatzkas
 clayo:pistolet
+clellandk:admired
 clevelandj:spink
 clinecolee:interinvolving
 clipperd:remanning
@@ -581,6 +584,7 @@ dengs2:demarcated
 dengy:turophiles
 dennehys:leproseries
 dennen:bucolics
+destah:particleboard
 detmerh:precompetitive
 devgunk:bacillar
 deweaverb:colleague
@@ -687,6 +691,7 @@ engela2:electrothermy
 engelk2:rhapsodising
 engermank:clergymen
 enriquezd:shoder
+erichc:shmoes
 ericksonk:enhypostatized
 ericksonw:codist
 escosteguyl:shiels
@@ -921,6 +926,7 @@ hadjiyanise:antismokers
 hafnerb:subvertical
 hagarm:loach
 hagstromp:pigeonhole
+hagueg2:demonologic
 hahnj2:recurrence
 haileabd:pareses
 hairstonk:counter
@@ -1276,6 +1282,7 @@ knopk:carnal
 knospew2:tartar
 knowlesr:trouncer
 knudsonm2:undermen
+knutsene:phratries
 knutsonl2:scripturally
 koellingh:aspartames
 kohlmanc:cutwork
@@ -1471,6 +1478,7 @@ lordk:border
 lorenzf:wanted
 louisa:daffodil
 lowej2:slipsheeting
+lowere:flannens
 lowryb:cruelly
 lowryn:decigramme
 loxe:eudemonist
@@ -1591,6 +1599,7 @@ mcnameec:foreboder
 mcohen:unpersuaded
 mcphersonn:vavasory
 mctaggartc:hospitia
+mcveighq:wristbands
 mcwilliamsc:enderon
 mdecker:skerricks
 meekerd:subscribe
@@ -2057,6 +2066,7 @@ rkeiser:paradoses
 rnau:pyrogenic
 robertsa2:desining
 robertsr2:disunionist
+robinsonj2:retrorocket
 robinsonl:disorganizer
 rockd:overfamiliarity
 rodriguezd:misnaming
@@ -2159,6 +2169,7 @@ schifferc:graplements
 schillingm:romancer
 schillj:patriclinic
 schlicke:bupivacaine
+schmidtj3:beachgoers
 schniedersb:corruptionist
 schondorfa:unadvisableness
 schregardusc:popsies
@@ -2534,6 +2545,7 @@ wahlj2:hamshackled
 walkera3:aureities
 walkerb2:packsaddle
 walkerj2:thematisations
+walshm3:pyritical
 walshw:mane
 waltersa2:adversariness
 waltherp:nonwoven
